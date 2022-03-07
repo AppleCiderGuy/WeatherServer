@@ -7,7 +7,8 @@ import (
 )
 
 func setupEndpointRouting() {
-	http.Handle("/report", customHandlerFunctions(WeatherRequestHandler))
+	http.Handle("/location", customHandlerFunctions(WeatherRequestHandler))
+	http.Handle("/point", customHandlerFunctions(PointWeatherRequestHandler))
 }
 
 func startServer() {
